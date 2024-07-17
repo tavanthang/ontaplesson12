@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TvtK22CNTLesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TvtCategory">
+          <Key>
+            <PropertyRef Name="TvtID" />
+          </Key>
+          <Property Name="TvtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TvtCateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TvtStatus" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TvtProduct">
+          <Key>
+            <PropertyRef Name="TvtId2210900063" />
+          </Key>
+          <Property Name="TvtId2210900063" Type="int" Nullable="false" />
+          <Property Name="TvtProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TvtQty" Type="int" />
+          <Property Name="TvtPrice" Type="float" />
+          <Property Name="TvtCateld" Type="int" />
+          <Property Name="TvtActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="TvtK22CNTLesson11DbModelStoreContainer">
+          <EntitySet Name="TvtCategory" EntityType="Self.TvtCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TvtProduct" EntityType="Self.TvtProduct" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TvtK22CNTLesson11DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TvtCategory">
+          <Key>
+            <PropertyRef Name="TvtID" />
+          </Key>
+          <Property Name="TvtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TvtCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TvtStatus" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TvtProduct">
+          <Key>
+            <PropertyRef Name="TvtId2210900063" />
+          </Key>
+          <Property Name="TvtId2210900063" Type="Int32" Nullable="false" />
+          <Property Name="TvtProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TvtQty" Type="Int32" />
+          <Property Name="TvtPrice" Type="Double" />
+          <Property Name="TvtCateld" Type="Int32" />
+          <Property Name="TvtActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="TvtK22CNTLesson11DbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TvtCategory" EntityType="Self.TvtCategory" />
+          <EntitySet Name="TvtProduct" EntityType="Self.TvtProduct" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TvtK22CNTLesson11DbModelStoreContainer" CdmEntityContainer="TvtK22CNTLesson11DbEntities1">
+          <EntitySetMapping Name="TvtCategory">
+            <EntityTypeMapping TypeName="TvtK22CNTLesson11DbModel.TvtCategory">
+              <MappingFragment StoreEntitySet="TvtCategory">
+                <ScalarProperty Name="TvtID" ColumnName="TvtID" />
+                <ScalarProperty Name="TvtCateName" ColumnName="TvtCateName" />
+                <ScalarProperty Name="TvtStatus" ColumnName="TvtStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TvtProduct">
+            <EntityTypeMapping TypeName="TvtK22CNTLesson11DbModel.TvtProduct">
+              <MappingFragment StoreEntitySet="TvtProduct">
+                <ScalarProperty Name="TvtId2210900063" ColumnName="TvtId2210900063" />
+                <ScalarProperty Name="TvtProName" ColumnName="TvtProName" />
+                <ScalarProperty Name="TvtQty" ColumnName="TvtQty" />
+                <ScalarProperty Name="TvtPrice" ColumnName="TvtPrice" />
+                <ScalarProperty Name="TvtCateld" ColumnName="TvtCateld" />
+                <ScalarProperty Name="TvtActive" ColumnName="TvtActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

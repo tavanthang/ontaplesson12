@@ -1,0 +1,56 @@
+﻿@model IEnumerable<TvtK22CNTLesson11_2210900063.Models.TvtCategory>
+
+@{
+    ViewBag.Title = "danh mục sản phẩm ";
+    Layout = "~/Views/Shared/Tvt2210900063_Layout.cshtml";
+}
+
+<h2>danh mục sản phẩm </h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<a href="/TvtCategories/Create" class="btn btn-primary my-3">thêm mới </a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtStatus)
+        </th>
+        <th>chức năng </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtCateName)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.TvtStatus)*@
+
+            @if (item.TvtStatus == true)
+            {
+                <span style="color:green"> hoạt động </span>
+            }
+            else
+            {
+                <span style="color:red">không hoạt động </span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TvtID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TvtID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TvtID })
+        </td>
+    </tr>
+}
+
+</table>

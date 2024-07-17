@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TvtK22CNTLesson11DbModelStoreContainer" CdmEntityContainer="TvtK22CNTLesson11DbEntities1">
+    <EntitySetMapping Name="TvtCategory">
+      <EntityTypeMapping TypeName="TvtK22CNTLesson11DbModel.TvtCategory">
+        <MappingFragment StoreEntitySet="TvtCategory">
+          <ScalarProperty Name="TvtID" ColumnName="TvtID" />
+          <ScalarProperty Name="TvtCateName" ColumnName="TvtCateName" />
+          <ScalarProperty Name="TvtStatus" ColumnName="TvtStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TvtProduct">
+      <EntityTypeMapping TypeName="TvtK22CNTLesson11DbModel.TvtProduct">
+        <MappingFragment StoreEntitySet="TvtProduct">
+          <ScalarProperty Name="TvtId2210900063" ColumnName="TvtId2210900063" />
+          <ScalarProperty Name="TvtProName" ColumnName="TvtProName" />
+          <ScalarProperty Name="TvtQty" ColumnName="TvtQty" />
+          <ScalarProperty Name="TvtPrice" ColumnName="TvtPrice" />
+          <ScalarProperty Name="TvtCateld" ColumnName="TvtCateld" />
+          <ScalarProperty Name="TvtActive" ColumnName="TvtActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

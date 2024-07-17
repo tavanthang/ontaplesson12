@@ -1,0 +1,59 @@
+﻿@model TvtK22CNTLesson11_2210900063.Models.TvtProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Tvt2210900063_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TvtProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtCateld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtCateld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TvtId2210900063 }) |
+    @Html.ActionLink("Back to List", "TvtIndex")
+</p>

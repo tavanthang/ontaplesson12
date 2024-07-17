@@ -1,0 +1,35 @@
+﻿@model TvtK22CNTLesson11_2210900063.Models.TvtCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Tvt2210900063_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TvtCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvtStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvtStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TvtID }) |
+    @Html.ActionLink("Back to List", "TvtIndex")
+</p>

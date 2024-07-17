@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TvtK22CNTLesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TvtCategory">
+    <Key>
+      <PropertyRef Name="TvtID" />
+    </Key>
+    <Property Name="TvtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TvtCateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TvtStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TvtProduct">
+    <Key>
+      <PropertyRef Name="TvtId2210900063" />
+    </Key>
+    <Property Name="TvtId2210900063" Type="int" Nullable="false" />
+    <Property Name="TvtProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TvtQty" Type="int" />
+    <Property Name="TvtPrice" Type="float" />
+    <Property Name="TvtCateld" Type="int" />
+    <Property Name="TvtActive" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="TvtK22CNTLesson11DbModelStoreContainer">
+    <EntitySet Name="TvtCategory" EntityType="Self.TvtCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TvtProduct" EntityType="Self.TvtProduct" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

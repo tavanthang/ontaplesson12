@@ -1,0 +1,74 @@
+﻿@model IEnumerable<TvtK22CNTLesson11_2210900063.Models.TvtProduct>
+
+@{
+    ViewBag.Title = "danh sách sản phẩm";
+    Layout = "~/Views/Shared/Tvt2210900063_Layout.cshtml";
+}
+
+<h2>danh sách sản phẩm</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<a href="/TvtProducts/Create" class="btn btn-primary my-2">thêm mới </a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtId2210900063)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtProName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtCateld)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvtActive)
+            
+        </th>
+        <th>chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtId2210900063)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtProName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvtCateld)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.TvtActive)*@
+            @if (item.TvtActive == "true")
+            {
+                <span style="color:green"> hoạt động </span>
+            }
+            else
+            {
+                <span style="color:red">không hoạt động </span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TvtId2210900063 }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TvtId2210900063 }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TvtId2210900063 })
+        </td>
+    </tr>
+}
+
+</table>
